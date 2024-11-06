@@ -51,9 +51,14 @@ def calculate ():
         all_values = str(result)
     
 
+def clean_screen ():
+    global all_values
+    all_values = ""
+    text_value.set("")
+
 
 # buttons
-b_1 = Button(body_frame, text="C", width=11, height=2, bg=color4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_1 = Button(body_frame, command = clean_screen, text="C", width=11, height=2, bg=color4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_1.place(x=0, y=0)
 b_2 = Button(body_frame, command = lambda: input_values('%'), text="%", width=5, height=2, bg=color4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_2.place(x=118, y=0)

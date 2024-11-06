@@ -37,8 +37,19 @@ def input_values(event):
 
 
 def calculate ():
-    result = eval(all_values)
-    print(result)
+    try:
+        global all_values
+        result = eval(all_values)
+    except SyntaxError:
+        text_value.set("Equação Inválida.")
+    except ZeroDivisionError:
+        text_value.set("Impos. dividir por 0.")
+    else:
+        text_value.set(str(result))
+
+        all_values = ""
+        all_values = str(result)
+    
 
 
 # buttons

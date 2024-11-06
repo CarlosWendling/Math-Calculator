@@ -36,6 +36,11 @@ def input_values(event):
     text_value.set(all_values)
 
 
+def calculate ():
+    result = eval(all_values)
+    print(result)
+
+
 # buttons
 b_1 = Button(body_frame, text="C", width=11, height=2, bg=color4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_1.place(x=0, y=0)
@@ -75,7 +80,7 @@ b_1 = Button(body_frame, command = lambda: input_values('0'), text="0", width=11
 b_1.place(x=0, y=208)
 b_2 = Button(body_frame, command = lambda: input_values('.'), text=".", width=5, height=2, bg=color4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_2.place(x=118, y=208)
-b_3 = Button(body_frame, text="=", width=5, height=2, bg=color5, fg=color2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_3 = Button(body_frame, command = calculate, text="=", width=5, height=2, bg=color5, fg=color2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_3.place(x=177, y=208)
 
 window.mainloop()

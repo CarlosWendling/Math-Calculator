@@ -19,6 +19,11 @@ display_frame.grid(row=0, column=0)
 body_frame = Frame(window, width=235, height=268)
 body_frame.grid(row=1, column=0)
 
+# labels
+text_value = StringVar()
+display_label = Label(display_frame, textvariable=text_value, width=16, height=2, padx=7, relief=FLAT, anchor="e", justify=RIGHT, font=('Ivy 18'), bg=color3, fg=color2)
+display_label.place(x=0, y=0)
+
 # buttons
 b_1 = Button(body_frame, text="C", width=11, height=2, bg=color4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_1.place(x=0, y=0)
